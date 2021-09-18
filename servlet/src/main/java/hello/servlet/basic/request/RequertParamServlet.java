@@ -20,6 +20,8 @@ public class RequertParamServlet extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException { 
 		
+		/*request.getParameter() 는 GET URL 쿼리 파라미터 형식도 지원하고, POST HTML Form 형식도 둘 다 지원한다*/
+		
 		System.out.println("[전체 파라미터 조회] - start");
 		request.getParameterNames().asIterator().forEachRemaining(paramName -> System.out.println(paramName +"=" + request.getParameter(paramName)));
 		System.out.println("[전체 파라미터 조회] - end");
